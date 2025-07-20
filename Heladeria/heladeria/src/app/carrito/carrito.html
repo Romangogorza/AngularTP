@@ -1,0 +1,32 @@
+<div class="carrito" [class.compra-realizada]="compraRealizada">
+  <h2 *ngIf="!compraRealizada">🛒 Tu carrito</h2>
+
+  <ng-container *ngIf="!compraRealizada; else compraHecha">
+    <div class="item-carrito" *ngFor="let h of carritoLista$ | async">
+      <div class="producto">
+        <span class="nombre">{{ h.nombre }}</span> -
+        <span class="precio">${{ h.precio }}</span> -
+        <span class="cantidad">x{{ h.cantidad }}</span>
+      </div>
+    </div>
+
+    <div class="total">
+      <strong>Total: ${{ total }}</strong>
+    </div>
+
+    <button 
+  *ngIf="(carritoLista$ | async)?.length" 
+  (click)="vaciar()" 
+  class="btn btn-danger">
+  Vaciar carrito
+</button>
+    <button class="boton-comprar" (click)="finalizarCompra()">Finalizar compra</button>
+  </ng-container>
+
+  <!-- ✅ Contenido que aparece cuando finaliza la compra -->
+  <ng-template #compraHecha>
+    <div class="compra-exitosa">
+    
+    </div>
+  </ng-template>
+</div>

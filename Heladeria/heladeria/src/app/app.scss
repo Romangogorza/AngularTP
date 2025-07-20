@@ -1,0 +1,63 @@
+/* Color rosa principal */
+.bg-rosa-intenso {
+  background-color: #ff4da6; /* rosa fuerte pero alegre */
+}
+
+/* Navbar */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar-brand:hover {
+  color: #ffe4ec;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ffe4ec !important; /* rosa pastel cuando pasás el mouse */
+}
+
+/* Contenido principal */
+.main-content {
+  min-height: 70vh;
+  background-color: #fff6fa; /* fondo rosita suave */
+  padding: 2rem;
+}
+
+/* Footer */
+.footer-rosa {
+  background-color: #2b2b2b; /* oscuro para contraste */
+}
+
+.text-pink {
+  color: #ff4da6 !important;
+}
+
+.text-pink:hover {
+  text-decoration: underline;
+  color: #ff80c0 !important;
+}
+
+/* Botones generales (si querés usarlos en el inicio) */
+.btn-pink {
+  background-color: #ff4da6;
+  color: white;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-pink:hover {
+  background-color: #ff80c0;
+}

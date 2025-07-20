@@ -1,0 +1,84 @@
+.carrito {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s ease-in-out; /* transición suave */
+}
+
+.carrito h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 0.95rem;
+}
+
+.total {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+.boton-comprar {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: none;
+  background-color: #66bb6a;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-comprar:hover {
+  background-color: #4caf50;
+}
+
+/* ✅ Cuando la compra está finalizada */
+.carrito.compra-realizada {
+  background-color: #c8f7c5; /* verde suave */
+  border: 2px solid #81c784;
+  animation: brillo 2.5s ease-in-out;
+}
+
+.carrito.compra-realizada::before {
+  content: "✅ ¡Compra realizada!";
+  display: block;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+@keyframes brillo {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  30% {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

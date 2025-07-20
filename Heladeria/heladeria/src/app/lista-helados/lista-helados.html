@@ -1,0 +1,47 @@
+<table class="table table-bordered table-hover align-middle text-center">
+  <thead class="table-warning">
+    <tr>
+      <th scope="col">🍨 Helado</th>
+      <th scope="col">💰 Precio</th>
+      <th scope="col">✨ Tipo</th>
+       <th scope="col"> Stock</th>
+      <th scope="col"> Cantidad</th>
+      <th scope="col"> Comprar</th>
+    </tr>
+  </thead>
+<tbody>
+  @for (helado of helados; track helado.nombre) {
+    <tr>
+      <td>{{ helado.nombre }}</td>
+      <td>${{ helado.precio }}</td>
+      <td>{{ helado.tipo }}</td>
+      
+      <!-- Columna de STOCK -->
+      <td>
+        <span *ngIf="helado.stock > 0; else sinStock">
+          {{ helado.stock }}
+        </span>
+        <ng-template #sinStock>
+          <span class="sin-stock">Sin stock</span>
+        </ng-template>
+      </td>
+
+      <!-- Columna de CANTIDAD (siempre visible) -->
+      <td>
+        <app-botones [helado]="helado"></app-botones>
+      </td>
+
+      <!-- Botón de COMPRAR -->
+      <td>
+        <button 
+          (click)="agregarAlCarrito(helado)" 
+          [disabled]="helado.stock === 0">
+          COMPRAR
+        </button>
+      </td>
+    </tr>
+  }
+</tbody>
+</table>
+<app-carrito (reponerStock)="reponerStock($event)"></app-carrito>
+
