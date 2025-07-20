@@ -1,0 +1,11 @@
+Roman Gogorza
+DNI: 44321786
+romangogorza2003@gmail.com
+Sede Tandil
+
+Heladería GoGo es un sitio web simple y atractivo desarrollado en Angular, pensado para mostrar de forma organizada la oferta de una heladería.
+Cuenta con:
+
+✅ Página de inicio con una presentación de la heladería.
+✅ Sección de helados, donde se listan los sabores disponibles.
+✅ Página de contacto, para que los clientes se comuniquen fácilmente.
